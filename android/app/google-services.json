@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "681378528209",
+    "project_id": "classattendanceusingqr",
+    "storage_bucket": "classattendanceusingqr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681378528209:android:f02db0929c1e328e8bfef0",
+        "android_client_info": {
+          "package_name": "attendance.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681378528209-1ebhborlnnd13ihicvsfavh6kiqg7gas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC28Z6X93lwPtS1ew8dI2DdRZO05FG929s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681378528209-1ebhborlnnd13ihicvsfavh6kiqg7gas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
