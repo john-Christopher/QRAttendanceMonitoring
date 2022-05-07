@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "681378528209",
-    "project_id": "classattendanceusingqr",
-    "storage_bucket": "classattendanceusingqr.appspot.com"
+    "project_number": "141171295411",
+    "project_id": "qrattendancemonitoring-90058",
+    "storage_bucket": "qrattendancemonitoring-90058.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:681378528209:android:f02db0929c1e328e8bfef0",
+        "mobilesdk_app_id": "1:141171295411:android:d4ff461ac04fb8e6959cc6",
         "android_client_info": {
-          "package_name": "attendance.com"
+          "package_name": "com.qrattendancemonitoring"
         }
       },
       "oauth_client": [
         {
-          "client_id": "681378528209-1ebhborlnnd13ihicvsfavh6kiqg7gas.apps.googleusercontent.com",
+          "client_id": "141171295411-sqorqvnn30tacnoua6fq9a205qfeod4k.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC28Z6X93lwPtS1ew8dI2DdRZO05FG929s"
+          "current_key": "AIzaSyBYBErgXELeZC8nRR6hTt0Aw2v2z1lTbno"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "681378528209-1ebhborlnnd13ihicvsfavh6kiqg7gas.apps.googleusercontent.com",
+              "client_id": "141171295411-sqorqvnn30tacnoua6fq9a205qfeod4k.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

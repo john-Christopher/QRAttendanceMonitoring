@@ -20,7 +20,7 @@ function onSuccess (e) {
           ...documentSnapshot.data(),
           key: documentSnapshot.id,
         });
-
+      
       })
       Alert.alert(
         "Scan Success",

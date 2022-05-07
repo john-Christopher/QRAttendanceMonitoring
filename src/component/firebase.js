@@ -4,13 +4,13 @@ import { firebase } from '@react-native-firebase/auth';
 
 function firebaseConfig (){
   var firebaseConfig = {
-    apiKey: "AIzaSyC28Z6X93lwPtS1ew8dI2DdRZO05FG929s",
-    authDomain: "classattendanceusingqr.firebaseapp.com",
-    databaseURL: "https://classattendanceusingqr.firebaseio.com",
-    projectId: "classattendanceusingqr",
-    storageBucket: "classattendanceusingqr.appspot.com",
+    apiKey: "AIzaSyBYBErgXELeZC8nRR6hTt0Aw2v2z1lTbno",
+    authDomain: "qrattendancemonitoring-90058.firebaseapp.com",
+    databaseURL: "https://qrattendancemonitoring-90058.firebaseio.com",
+    projectId: "qrattendancemonitoring-90058",
+    storageBucket: "qrattendancemonitoring-90058.appspot.com",
     messagingSenderId: "378341971593",
-    appId: "1:681378528209:android:f02db0929c1e328e8bfef0",
+    appId: "1:141171295411:android:d4ff461ac04fb8e6959cc6",
   };
   
   

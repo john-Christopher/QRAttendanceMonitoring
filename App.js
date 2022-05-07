@@ -17,7 +17,7 @@ import firebaseConfig from './src/component/firebase';
 
 const Stack = createNativeStackNavigator();
 
-firebaseConfig();
+// firebaseConfig();
 
 const App = () => {
   return (

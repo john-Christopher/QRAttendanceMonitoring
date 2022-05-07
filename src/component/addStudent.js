@@ -29,7 +29,8 @@ function addStudent(idNum, regNum, email, name, CY, cc, qrValue ){
         ]
       )
     })
-    .catch(() => {
+    .catch(err => {
+      console.error("Error", err)
       Alert.alert(
         "Empty field",
         "Please fill up all the text field",

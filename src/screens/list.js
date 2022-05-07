@@ -14,16 +14,15 @@ import firestore from '@react-native-firebase/firestore';
 export default function ListScreen({navigation, route}){
   const qrValue1 = qrCode();
   const qrValue2 = qrCode();
-  const qrValue3 = qrCode();
   const activeEmail = route.params?.activeEmail;
   const activeAccount = route.params?.activeAccount;
-  const [stdName, setStdName] = React.useState('');
-  const [idNum, setIdNum] = React.useState('');
-  const [regNum, setRegNum] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [name, setName] = React.useState('');
-  const [CY, setCY] = React.useState('');
-  const [cc, setCC] = React.useState('');
+  const [stdName, setStdName] = React.useState([]);
+  const [idNum, setIdNum] = React.useState([]);
+  const [regNum, setRegNum] = React.useState([]);
+  const [email, setEmail] = React.useState([]);
+  const [name, setName] = React.useState([]);
+  const [CY, setCY] = React.useState([]);
+  const [cc, setCC] = React.useState([]);
   const [activeModal, setModalVisible] = React.useState(false);
   const [present, setPresent] = useState([]);
   const table = {
@@ -32,24 +31,24 @@ export default function ListScreen({navigation, route}){
   
   
 
-  useEffect(() => {
-    const subscriber = firestore()
-      .collection('attendance')
-      .onSnapshot(querySnapshot => {
-        const present = []
+  // useEffect(() => {
+  //   const subscriber = firestore()
+  //     .collection('attendance')
+  //     .onSnapshot(querySnapshot => {
+  //       const present = []
 
-        querySnapshot.forEach(documentSnapshot => {
-          present.push({
-            ...documentSnapshot.data(),
-            key: documentSnapshot.id,
-          });
-        });
+  //       querySnapshot.forEach(documentSnapshot => {
+  //         present.push({
+  //           ...documentSnapshot.data(),
+  //           key: documentSnapshot.id,
+  //         });
+  //       });
 
-        setPresent(present)
-      })
+  //       setPresent(present)
+  //     })
 
-      return () => subscriber();
-  })
+  //     return () => subscriber();
+  // })
 
   return(
     <View style={styles.mainContainer}>
@@ -127,18 +126,83 @@ export default function ListScreen({navigation, route}){
               placeholderTextColor={'#999'}
               style={styles.modalInput}
             />
-            <TextInput 
+            <QRCode 
               value={qrValue1}
+              size={250}
+              bgColor='#fff'
+              fgColor='#000'
+            />
+            {/* second form */}
+            {/* <Text>{'\n'}</Text>
+            <Text style={styles.modalTxtHeader}>
+              Generate Student QR Code {'\n'}
+            </Text>
+            <Text style={styles.modalTxt}>
+              ID Number:
+            </Text>
+            <TextInput
+              value={idNum}
+              onChangeText={setIdNum}
+              placeholder='e.g. 2018-PC-111111'
+              placeholderTextColor={'#999'}
               style={styles.modalInput}
             />
+            <Text style={styles.modalTxt}>
+              Registration Number:
+            </Text>
+            <TextInput
+              value={regNum}
+              onChangeText={setRegNum} 
+              placeholder='e.g. 20220115998'
+              placeholderTextColor={'#999'}
+              style={styles.modalInput}
+            />
+            <Text style={styles.modalTxt}>
+              BU Email address:
+            </Text>
             <TextInput 
+              value={email}
+              onChangeText={setEmail} 
+              placeholder='e.g. juandela.cruz@bicol-u.edu.ph'
+              placeholderTextColor={'#999'}
+              style={styles.modalInput}
+            />
+            <Text style={styles.modalTxt}>
+              Name:
+            </Text>
+            <TextInput 
+              value={name}
+              onChangeText={setName} 
+              placeholder='e.g. Juan Dela Cruz'
+              placeholderTextColor={'#999'}
+              style={styles.modalInput}
+            />
+            <Text style={styles.modalTxt}>
+              Course &amp; Year:
+            </Text>
+            <TextInput 
+              value={CY}
+              onChangeText={setCY} 
+              placeholder='e.g. BSIT 1A'
+              placeholderTextColor={'#999'}
+              style={styles.modalInput}
+            />
+            <Text style={styles.modalTxt}>
+              Course Code:
+            </Text>
+            <TextInput 
+              value={cc}
+              onChangeText={setCC} 
+              placeholder='e.g. IT - 117'
+              placeholderTextColor={'#999'}
+              style={styles.modalInput}
+            />
+            <QRCode 
               value={qrValue2}
-              style={styles.modalInput}
-            />
-            <TextInput 
-              value={qrValue3}
-              style={styles.modalInput}
-            />
+              size={250}
+              bgColor='#fff'
+              fgColor='#000'
+            /> */}
             <View style={styles.modalBtnHandler}>
               <Pressable style={styles.btnModal} onPress={() => addStudent(idNum, regNum, email, name, CY, cc, qrValue)}>
                 <Text style={styles.modalBtnTxt}>Submit</Text>
@@ -186,7 +250,7 @@ export default function ListScreen({navigation, route}){
           }}/>
         </Table> */}
       </ScrollView>
-      <FlatList 
+      {/* <FlatList 
         data={present}
         renderItem={({ item }) => {
           <ScrollView style={styles.tableHeader}>
@@ -211,7 +275,7 @@ export default function ListScreen({navigation, route}){
             </View>
           </ScrollView>
         )}
-      />
+      /> */}
       {/* end main view */}
       <View style={styles.btnContainer}>
           <Pressable style={styles.btn} onPress={() => navigation.navigate({
